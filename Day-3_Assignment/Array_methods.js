@@ -27,5 +27,60 @@ let adult = users.find(user=> user.age>18);
 console.log(adult)
 
 // 5 Use of forEach Function
-let fruuits=["Apple", "Banana", "Orange"]
+let fruits=["Apple", "Banana", "Orange"]
+fruits.forEach((fruit,index) => {
+    console.log(`${index}:${fruit}`)
+})
 
+// 6 use of map function 
+let user = [
+    {name:"Swikar", age: 19},
+    {name:"Udaya", age: 22},
+    {name:"Laxman", age: 25},
+]    
+let names = user.map(user => user.name)
+console.log(names)
+
+// 7 Use of Filter
+let products = [
+  { name: "Pen", price: 90 },
+  { name: "Laptop", price: 29999 },
+  { name: "Book", price: 300 },
+  { name: "Headphones", price: 1500 },
+];
+
+let affordable = products.filter(product => product.price < 10000);
+console.log(affordable);
+
+//8 use of reduce 
+let nums = [3, 67, 12, 89, 45];
+
+const max = nums.reduce((highest, current) => {
+  return current > highest ? current : highest;
+}, numbers[0]);
+
+console.log(max);
+
+// 9 use of map and filter together
+let usr = [
+  { name: "Alice", age: 16 },
+  { name: "Bob", age: 22 },
+  { name: "Charlie", age: 25 },
+];
+
+let adultNames = usr
+  .filter(usr => usr.age >= 18)
+  .map(usr => usr.name.toUpperCase());
+
+console.log(adultNames);
+
+//10 Use OF foreach
+let items = ["Home", "About", "Services", "Contact"];
+
+let html = "<ul>\n";
+items.forEach(item => {
+  html += `  <li>${item}</li>\n`;
+});
+html += "</ul>";
+
+console.log(html);
