@@ -104,7 +104,7 @@ function getAppSettings() {
 getAppSettings().then((settings) => {
   console.log("Theme:", settings.theme)
   console.log("Language:", settings.language)
-});
+})
 
 //8 
 function fetchUsers() {
@@ -114,13 +114,13 @@ function fetchUsers() {
         { id: 1, name: "Swikar" },
         { id: 2, name: "Pujan" },
         { id: 3, name: "udaya" }
-      ]);
-    }, 1000);
-  });
+      ])
+    }, 1000)
+  })
 }
 
 async function main() {
-  let users = await fetchUsers();
+  let users = await fetchUsers()
   users.forEach(u => console.log(u.id + ": " + u.name))
 }
 
@@ -135,8 +135,8 @@ function fetchUsersWithTimeout() {
       } else {
         reject(new Error("Network timeout"))
       }
-    }, 1000);
-  });
+    }, 1000)
+  })
 }
 
 async function hello() {
@@ -148,7 +148,7 @@ async function hello() {
   }
 }
 
-hello();
+hello()
 
 //10 Combine everything
 // Config

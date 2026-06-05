@@ -42,4 +42,3 @@ let user = {
 const { name, country } = user
 console.log(name)
 console.log(country)
-
