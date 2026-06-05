@@ -17,7 +17,7 @@ let button = {
 }
 //bug : this is lost when detached 
 let broken = button.handleclick
-try { broken(); } catch(e) { console.log("Broken: " + e.message)}
+try { broken() } catch(e) { console.log("Broken: " + e.message)}
 
 // Fix: bind preserves context
 let fixed = button.handleclick.bind(button)
@@ -121,7 +121,7 @@ function fetchUsers() {
 
 async function main() {
   let users = await fetchUsers();
-  users.forEach(u => console.log(u.id + ": " + u.name));
+  users.forEach(u => console.log(u.id + ": " + u.name))
 }
 
 main()
@@ -144,7 +144,7 @@ async function hello() {
     let users = await fetchUsersWithTimeout()
     console.log("Loaded " + users.length + " user(s)")
   } catch (err) {
-    console.log("Something went wrong: " + err.message);
+    console.log("Something went wrong: " + err.message)
   }
 }
 
@@ -193,7 +193,7 @@ async function runStudentApp() {
   students.forEach(student => {
     console.log(formatStudent(student))
     console.log(student.getDetails())
-  });
+  })
 }
 
 runStudentApp()
